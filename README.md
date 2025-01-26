@@ -1,82 +1,109 @@
+MediCare
+MediCare is a React-based web application designed to help users locate medical centers across the country by selecting their state and city. Users can book appointments, explore specializations, and view their past bookings. The application ensures ease of access to healthcare facilities with an intuitive and user-friendly interface.
 
-# MediCare
-
-React-based web application that allows users to find medical centers in a specific state and city across the country and book appointments and avail facilities.
-
-
-
-
-
-## User Interface
-
-### Landing Page:
-
-- A top navigation bar with access to platform sections such as Find Doctors, Hospitals, Medicines, and more.
-- A search section for users to select a state and city, leading to a list of available medical centers in the chosen area.
-- Both State and City have a dropdown where the options will be fetched from an api which is provided in the description below.
+Features
+1. Landing Page
+Navigation Bar: Access various platform sections such as Find Doctors, Hospitals, and Medicines.
+State and City Search: Dropdown menus fetch available states and cities from an API, enabling users to view medical centers in their selected area.
+Hero Section: A visually appealing introduction with state and city selection.
+Specializations Section: Displays available medical specialties for users to explore.
+Blogs and Insights: Provides blogs and statistics on user engagement.
+Download App: Dedicated section to promote mobile app downloads.
+Footer: Useful links and contact details.
+Screenshots:
+Landing Page
 
 
-#### Hero section to select state and city
-![landing1](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-page1.jpg?raw=true)
-
----
-
-#### Specializations available
-![landing2](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-page2.jpg?raw=true)
-
----
-
-#### Blogs and overall consumers
-![landing3](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-page3.jpg?raw=true)
-
----
-
-#### Download app and footer section
-![landing4](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-page4.jpg?raw=true)
 
 
-### Slot Booking:
-- A detailed booking section for users to select a medical center, with a calendar-like interface to choose an appointment date.
-- The ability to book an appointment within a time frame from today up to one week in advance.
-- A selection of available time slots for the selected day.
+2. Slot Booking
+Medical Center Selection: Choose from a list of hospitals or centers in the selected city.
+Appointment Booking:
+Calendar interface to select an appointment date (from today up to one week in advance).
+Available time slots for the chosen day.
+Booking Confirmation: Receive a confirmation via email.
+Screenshots:
+Available Hospitals
 
----
-#### All available hospitals in the city
-![booking1](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-search1.jpg?raw=true)
+Date and Time Selection
 
----
+Booking Confirmation
 
-#### Select date and slot time
-![booking1](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-search2.jpg?raw=true)
+3. Past Bookings
+Personalized Dashboard: Users can view all their past bookings.
+Details: Includes medical center name, appointment date, and time.
+Screenshot:
+Past Bookings
 
----
+API Endpoints
+1. Get All States
+Fetch a list of all available states.
 
-#### Make the booking using mail
-![booking1](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-search3.jpg?raw=true)
+http
+Copy
+Edit
+GET https://meddata-backend.onrender.com/states
+2. Get Cities in a State
+Fetch cities within a selected state.
 
+http
+Copy
+Edit
+GET https://meddata-backend.onrender.com/cities/:state
+Example:
+GET https://meddata-backend.onrender.com/cities/Karnataka
 
-### Past Bookings Page:
+3. Get Medical Centers
+Fetch all medical centers based on state and city.
 
-- A personalized page displaying all user bookings, including details such as the medical center's name, appointment date, and time.
-![booking1](https://github.com/Apoorv0503/MediCare/blob/main/demo-img/medify-booking1.jpg?raw=true)
-## API Reference
+http
+Copy
+Edit
+GET https://meddata-backend.onrender.com/data?state=<state-name>&city=<city-name>
+Example:
+GET https://meddata-backend.onrender.com/data?state=Karnataka&city=Bangalore
 
-#### Get all states
+Installation and Setup
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/PK1812KHARE/MediCare.git
+cd MediCare
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Start the Development Server
+bash
+Copy
+Edit
+npm start
+The application will run on http://localhost:3000.
 
-```http
-  GET https://meddata-backend.onrender.com/states
-```
+Technologies Used
+Frontend: React.js
+Styling: CSS, Bootstrap
+APIs: Custom backend hosted on Render
+Tools: Git, npm
+Contributing
+Contributions are welcome! If you’d like to contribute:
 
-
-#### Get a particular City of a state
-
-```http
-  GET https://meddata-backend.onrender.com/cities/:state
-```
-
-#### Get a list of all medical centers based on a state and city
-
-```http
-  https://meddata-backend.onrender.com/data?state=<state-name>&city=<city-name>
-```
-
+Fork the repository.
+Create a new branch:
+bash
+Copy
+Edit
+git checkout -b feature-name
+Commit your changes:
+bash
+Copy
+Edit
+git commit -m "Description of changes"
+Push to your branch:
+bash
+Copy
+Edit
+git push origin feature-name
+Submit a pull request.
