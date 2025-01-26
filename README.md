@@ -11,10 +11,13 @@ Blogs and Insights: Provides blogs and statistics on user engagement.
 Download App: Dedicated section to promote mobile app downloads.
 Footer: Useful links and contact details.
 Screenshots:
-Landing Page
+Hero Section
 
+Specializations
 
+Blogs Section
 
+Footer Section
 
 2. Slot Booking
 Medical Center Selection: Choose from a list of hospitals or centers in the selected city.
